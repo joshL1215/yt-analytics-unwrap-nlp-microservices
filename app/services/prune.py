@@ -5,7 +5,7 @@ def prune_comments(comments: List[str], min_length: int = 20) -> List[str]:
     kept_comments = []
 
     # Take simple random sample
-    sample_size = min(500, len(comments))
+    sample_size = min(20, len(comments))
     comments = np.random.choice(comments, size=sample_size, replace=False)
 
     # Length pruning

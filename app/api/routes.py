@@ -15,8 +15,8 @@ def health_check():
 
 # Comment analysis
 @router.post("/analyze-comment")
-def analyze_comment(payload: dict):
-    return
+async def analyze_comment(payload: dict):
+    return await comment_analysis_handler(payload)
 
 
 # vid analysis

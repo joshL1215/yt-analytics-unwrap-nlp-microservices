@@ -1,6 +1,5 @@
 from fastapi import APIRouter
-from api.handlers import (
-    health_check_handler,
+from app.api.handlers import (
     comment_analysis_handler,
     video_analysis_handler
 )
@@ -14,8 +13,8 @@ def health_check():
 
 
 # Comment analysis
-@router.post("/analyze-comment")
-async def analyze_comment(payload: dict):
+@router.post("/analyze-comments")
+async def analyze_comments(payload: dict):
     return await comment_analysis_handler(payload)
 
 

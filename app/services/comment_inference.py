@@ -31,7 +31,7 @@ class BatchAnalysisResult(BaseModel):
 async def analyze_comments_batch(
     comments: List[str],
     product_context: Optional[str] = None,
-    batch_size: int = 20
+    batch_size: int = 50
 ) -> List[Dict]:
     """
     Analyze a batch of comments using Azure OpenAI with structured output.
@@ -129,7 +129,7 @@ Keep outputs concise and deterministic. Be precise and consistent in categorizat
 async def analyze_comments(
     comments: List[str],
     product_context: Optional[str] = None,
-    batch_size: int = 20
+    batch_size: int = 50
 ) -> Dict:
     """
     Main function to analyze comments with batching support.

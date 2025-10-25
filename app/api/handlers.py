@@ -23,7 +23,6 @@ async def comment_analysis_handler(payload: dict) -> dict:
         "analysis_stats": analysis_results["stats"],
         "pruning_info": {
             "kept_comments": kept_comments,
-            "all_comments"
             "stats": {
                 "total": len(comments),
                 "kept": len(kept_comments),
